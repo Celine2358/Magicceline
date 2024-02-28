@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="Head.png"> <!--사이트 아이콘-->
+    <title>매직 셀리느 RPG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HTMLrpg.css">
+    <link rel="stylesheet" href="Stat.css">
+</head>
+<body>
+    <div class="background"> <!--필드 배경-->
+        <div class="backgroundImg">
+            <div id="backgroundA">
+                <img src="MtField.png" alt="맵배경">
+                <audio id="Music" loop autoplay>
+                    <source src="Music.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="backgroundB">
+                <img src="MtField.png" alt="맵배경">
+            </div>
+            <div id="spark"> <!--보스 스킬 : 전기장-->
+                <img src="spark.gif" style="width: 150px; height: 150px;">
+                <audio id="sound_sp">
+                    <source src="sparkSound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="Player"> <!--캐릭터-->
+                <div id="PlayerImg">
+                    <img id="Playerpng" src="Character.png" alt="캐릭터">
+                </div>
+            </div>
+            <div id="Skill1"> <!--캐릭터 스킬 : 파이어볼-->
+                <img src="fireball.png" style="width: 75px; height: 49px;">
+                <audio id="sound1">
+                    <source src="Skill1_Sound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="Skill2"> <!--캐릭터 스킬 : 윈드-->
+                <img src="Wind.gif" style="width: 160px; height: 160px;">
+                <audio id="sound2">
+                    <source src="Skill2_Sound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="heal"> <!--캐릭터 스킬 : 힐-->
+                <img src="heal.gif" style="width: 70px; height: 70px;">
+                <audio id="sound5">
+                    <source src="healSound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="Boss"> <!--보스 : 골렘-->
+                <div id="Golem">
+                    <img id="GolemImg" src="BossGolem.gif" alt="보스골렘">
+                </div>
+            </div>
+            <div id="Skill3"> <!--캐릭터 스킬 : 썬더-->
+                <img src="thunderbolt.gif">
+                <audio id="sound3">
+                    <source src="Skill3_Sound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="Skill4"> <!--캐릭터 스킬 : 웨이브-->
+                <img src="wave.gif" style="width: 300px; height: 300px;">
+                <audio id="sound4">
+                    <source src="Skill4_Sound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="boss_explosion"> <!--보스 스킬 : 폭발-->
+                <div id="warn1"> <!--예고 1-->
+                    <img src="explosionWarn.gif" style="width: 45px; height: 45px;">
+                </div>
+                <div id="explosion1"> <!--폭발 1-->
+                    <img src="explosion.gif" style="width: 180px; height: 180px;">
+                    <audio id="sound_ex"> <!--폭발음-->
+                        <source src="explosionSound.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div id="warn2"> <!--예고 2-->
+                    <img src="explosionWarn.gif" style="width: 45px; height: 45px;">
+                </div>
+                <div id="explosion2"> <!--폭발 2-->
+                    <img src="explosion.gif" style="width: 180px; height: 180px;">
+                </div>
+                <div id="target"> <!--추적-->
+                    <img src="target.gif" style="width: 60px; height: 60px;">
+                    <audio id="sound_target"> <!--추적음-->
+                        <source src="targetSound.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div id="boom"> <!--추적 폭발-->
+                    <img src="boom.gif" style="width: 200px; height: 200px;">
+                    <audio id="sound_boom"> <!--추적 폭발음-->
+                        <source src="boomSound.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div id="boss_beam"> <!--보스 스킬 : 레이저-->
+                <div id="charging">
+                    <img id="chargingImg" src="beamCharge.gif" style="width: 90px; height: 90px;">
+                    <audio id="sound_charge"> <!--충전 효과음-->
+                        <source src="beamCharging.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div id="beam1">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                    <audio id="sound_beam"> <!--레이저 효과음-->
+                        <source src="beamSound.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div id="beam2">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam3">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam4">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam5">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam6">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam7">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam8">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam9">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+                <div id="beam10">
+                    <img src="beam.gif" style="width: 110px; height: 110px;">
+                </div>
+            </div>
+            <div id="boss_rock1"> <!--보스 스킬 : 낙석-->
+                <img id="rock1Img" src="rock.png" style="width: 50px; height: 50px;">
+            </div>
+            <div id="boss_rock2"> <!--보스 스킬 : 낙석-->
+                <img id="rock2Img" src="rock.png" style="width: 50px; height: 50px;">
+            </div>
+            <div id="firefield1"> <!--불길 1-->
+                <img src="firefield.gif" style="width: 80px; height: 80px;">
+                <audio id="sound_firefield"> <!--폭발음-->
+                    <source src="firefieldSound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="firefield2"> <!--불길 2-->
+                <img src="firefield.gif" style="width: 80px; height: 80px;">
+            </div>
+            <div id="burnEff"> <!--보스 화상-->
+                <img src="burn.gif" style="width: 200px; height: 150px;">
+            </div>
+            <div id="PlayerUI"> <!--플레이어 정보-->
+                <div id="headUI">
+                    <div id="nickname">셀리느</div>
+                    <div id="head">
+                        <img id='headImg'src="Head.png" style="width: 57px; height: 51px;">
+                    </div>
+                    <div id="HP">
+                        HP : 1000 / 1000
+                    </div>
+                    <div id="MP">
+                        MP : 50%
+                    </div>
+                </div>
+                <div id="Damage"> <!--데미지 스킨-->
+                </div>
+                <div id="icon1">
+                    <span style="position: absolute; left: 2px; top: 0px;">A</span>
+                    <img src="Skillicon1.png">
+                </div>
+                <div id="icon2">
+                    <span style="position: absolute; left: 2px; top: 0px;">Z</span>
+                    <img src="Skillicon2.png">
+                </div>
+                <div id="icon3">
+                    <span style="position: absolute; left: 2px; top: 0px;">X</span>
+                    <img src="Skillicon3.png">
+                </div>
+                <div id="icon4">
+                    <span style="position: absolute; left: 2px; top: 0px;">W</span>
+                    <img src="Skillicon4.png">
+                </div>
+                <div id="icon5">
+                    <span style="position: absolute; left: 2px; top: 0px;">S</span>
+                    <img src="Skillicon5.png">
+                </div>
+            </div>
+            <div id="BossUI"> <!--보스 정보-->
+                고대의 골렘 (Normal)
+                <div id="BossHP">
+                    HP : 100000 (100%)
+                </div>
+            </div>
+            <div id="BossDamage">
+            </div>
+            <div id="BossDebuff">
+                <img src="swordbreak.png" style="width: 50px; height: 41px;">
+            </div>
+            <div id="BossDie"> <!--보스 사망 연출-->
+                <img src="BossDie.gif" style="width: 380px; height: 380px;">
+            </div>
+            <div id="Msg"></div>
+            <div id="EndA">
+                <div style="font-size: 30px; color: red; -webkit-text-stroke: 1px black;">GAME OVER</div>
+                <div>젠장... 너무 강해... </div>
+                <br><div id="ReTry1" onclick="Re()">ReTry</div>
+            </div>
+            <div id="EndB">
+                <div style="font-size: 30px; color: yellow; -webkit-text-stroke: 1px black;">CLEAR!!</div>
+                <div><span style="font-size: 22px">고대의 골렘 (Normal)을 쓰러뜨렸습니다!!</span></div>
+                <br>저의 첫 작품 '매직 셀리느 RPG'를 플레이해주셔서 감사합니다!!
+                <br><span style="font-weight: bold">고대의 골렘 (Hard)</span>과 
+                <span style="color: navy">고대 법사 쿠로(Normal/Hard)</span>의 추가도 기대해주세요!
+                <br><br>게임의 피드백은 아래 오픈채팅으로 해주시면 감사하겠습니다!
+                <br><br><span style="font-size: 22px; color: #FF6666">제작 : 셀리느(Celine)</span>
+                <img src="celine.jpg" style="width: 70px; height: 70px;">
+                <br><br>
+                <br><div id="ReTry2" onclick="ReStart()">Restart</div>
+                <br><div id="openchat" onclick="OpenChat()">오픈채팅</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Move.js">
+</script>
+<script src="bossMove.js">
+</script>
+<script src="Stat.js">
+</script>
+<script src="BossStat.js">
+</script>
+<script>
+    function Re() {
+        window.location.href = 'HTMLrpg.html';
+    }
+    function ReStart() {
+        window.location.href = 'http://magicceline.github.io/golem';
+    }
+    function OpenChat() {
+        window.open('https://open.kakao.com/o/s5Om6OKe', '_blank');
+    }
+</script>
+</html>

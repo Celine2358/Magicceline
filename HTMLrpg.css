@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Do Hyeon", sans-serif;
+    font-weight: 400;
+    overflow: hidden; /* 페이지 영역 초과 방지 */
+}
+
+.background, .backgroundImg {
+    display: flex;
+}
+
+#Player, #Boss, #Golem, 
+#Skill1, #Skill2, #Skill3, #Skill4, #heal, #burnEff,
+#boss_rock1, #boss_rock2, #firefield1, #firefield2, #spark,
+#boss_explosion, #warn1, #warn2, #explosion1, #explosion2, #target, #boom,
+#boss_beam, #charging, #beam1, #beam2, #beam3, #beam4, #beam5,
+#beam6, #beam7, #beam8, #beam9, #beam10,
+#EndA, #EndB {
+    display: block;
+    position: absolute;
+}
+#Player { /* 캐릭터 */
+    top: 400px; /* Y축 */
+}
+#Boss { /* 보스 골렘 */
+    left: 1083px;
+    top: 220px;
+}
+#Skill1 { /* 파이어볼 */
+    display: none;
+    top: 420px;
+}
+#Skill2 { /* 윈드 */
+    filter: hue-rotate(100deg); /* 스킬 색상 변환 */
+    display: none;
+    top: 350px;
+}
+#Skill3 { /* 썬더 */
+    filter: hue-rotate(160deg);
+    display: none;
+    left: 1020px;
+}
+#Skill4 { /* 웨이브 */
+    display: none;
+    top: 245px;
+}
+#heal { /* 힐 */
+    display: none;
+    top: 400px;
+}
+#burnEff { /* 화상 */
+    display: none;
+    right: 10%;
+    top: 35%;
+}
+#spark { /* 전기장 */
+    display: none;
+    left: 8px;
+    top: 345px;
+}
+#boss_rock1, #boss_rock2 { /* 낙석 */
+    display: none;
+    left: 8px;
+    top: 8px;
+}
+#firefield1, #firefield2 { /* 불길 */
+    display: none;
+    left: 8px;
+    top: 395px;
+}
+#warn1, #warn2 { /* 폭발 예고 */
+    filter: hue-rotate(300deg);
+    display: none;
+    top: 385px;
+    left: 70px;
+}
+#explosion1, #explosion2 { /* 폭발 */
+    display: none;
+    top: 315px;
+    left: 8px;
+}
+#target { /* 추적 폭발 */
+    display: none;
+    top: 390px;
+    left: 78px;
+}
+#boom {
+    display: none;
+    top: 315px;
+    left: 8px;
+}
+#charging {
+    display: none;
+    filter: hue-rotate(320deg);
+    top: 335px;
+    left: 1160px;
+}
+#beam1, #beam2, #beam3, #beam4, #beam5, #beam6, #beam7, #beam8, #beam9, #beam10 { /* 레이저 */
+    display: none;
+    filter: hue-rotate(200deg);
+    top: 335px;
+}
+#beam1 {
+    left: 1060px;
+}
+#beam2 {
+    left: 950px;
+}
+#beam3 {
+    left: 840px;
+}
+#beam4 {
+    left: 730px;
+}
+#beam5 {
+    left: 620px;
+}
+#beam6 {
+    left: 510px;
+}
+#beam7 {
+    left: 400px;
+}
+#beam8 {
+    left: 290px;
+}
+#beam9 {
+    left: 180px;
+}
+#beam10 {
+    left: 70px;
+}
+#EndA {
+    display: none;
+    position: absolute;
+    background-color: white;
+    opacity: 0.9; /* 투명도 90% */
+    border: 3px solid black;
+    border-radius: 16px;
+    box-shadow: 0 0 10px black;
+    width: 400px; height: 130px;
+    top: 198.5px;
+    left: 540px;
+    font-size: 17px;
+    text-align: center;
+}
+#EndB {
+    display: none;
+    position: absolute;
+    background-color: white;
+    opacity: 0.9; /* 투명도 90% */
+    border: 3px solid black;
+    border-radius: 16px;
+    box-shadow: 0 0 10px black;
+    width: 800px; height: 440px;
+    top: 88.5px;
+    left: 360px;
+    font-size: 17px;
+    text-align: center;
+}
+#ReTry1, #ReTry2, #openchat {
+    cursor: pointer;
+    background-color: white;
+    opacity: 1; /* 불투명 */
+    border: 2px solid black;
+    border-radius: 18px;
+    width: 110px; height: 22px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+}

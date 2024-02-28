@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="Head.png"> <!--사이트 아이콘-->
+    <title>매직 셀리느 RPG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+        body {
+            font-family: "Do Hyeon", sans-serif;
+            font-weight: 400;
+            overflow: hidden; /* 페이지 영역 초과 방지 */
+        }
+        .background, .backgroundImg {
+            display: flex;
+        }
+        #Player {
+            display: block;
+            position: absolute;
+            top: 400px;
+            left: 40px;
+        }
+        #Boss {
+            display: none;
+            position: absolute;
+            top: 220px;
+            left: 1100px;
+        }
+        #Intro1, #Intro2, #Intro3 {
+            display: none;
+            position: absolute;
+            background-color: white;
+            opacity: 0.9; /* 투명도 90% */
+            border: 3px solid black;
+            border-radius: 16px;
+            box-shadow: 0 0 10px black;
+            width: 800px; height: 440px;
+            top: 88.5px;
+            left: 360px;
+            font-size: 17px;
+            text-align: center;
+        }
+        #Intro1 {
+            display: block;
+        }
+        #a, #b, #c, #d, #e, #f, #g {
+            display: none;
+        }
+        #next1, #next2, #next3 {
+            cursor: pointer;
+            display: none;
+            position: absolute;
+            background-color: white;
+            opacity: 1; /* 불투명 */
+            border: 2px solid black;
+            border-radius: 18px;
+            width: 110px; height: 22px;
+            top: 400px;
+            left: 340px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"> <!--필드 배경-->
+        <div class="backgroundImg">
+            <div id="backgroundA">
+                <img src="MtField.png" alt="맵배경">
+            </div>
+            <div id="backgroundB">
+                <img src="MtField.png" alt="맵배경">
+            </div>
+            <div id="Player"> <!--캐릭터-->
+                <div id="PlayerImg">
+                    <img id="Playerpng" src="Character.png" alt="캐릭터">
+                </div>
+            </div>
+            <div id="Boss"> <!--보스 : 골렘-->
+                <div id="Golem">
+                    <img id="GolemImg" src="BossGolem.gif" alt="보스골렘">
+                </div>
+                <audio id="sound"> <!--폭발음-->
+                    <source src="explosionSound.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="Intro1" onclick="IntroA()"> <!--인트로-->
+                <div style="font-size: 30px; color: #FF3333; -webkit-text-stroke: 1px black;">매직 셀리느 RPG (Test)</div>
+                <div id="a"><br>내 이름은 <span style="color: #FF3333">셀리느</span> 라고해!
+                <br>마법의 도시 <span style="color: green;">신월</span>의 유명한 마법사야!</div>
+                <div id="b">신월의 소문에 의하면 이 땅이 맞을 거야
+                <br>600년 전 잠들었다는 '고대 마법 도시 <span style="color: blue;">선사파이어</span>'!!</div>
+                <div id="c">하지만... 어딜 봐도 사람 하나 없는 산과 숲 뿐이야...
+                <br>어디서 단서를 찾아야 하지?? 땅이라도 파봐야 하나?</div>
+                <div id="d" style="font-size: 22px"><br>쿠구구구구구구구궁...!!!!!!!</div>
+                <div id="e"><br>뭐... 뭐야?! 갑자기 왜 땅이 흔들려?? 으아아앗!!</div>
+                <div id="f" style="font-size: 22px"><br>고대의 땅에 침입한 네놈을 없애겠다.</div>
+                <div id="next1" onclick="NextA()">NEXT</div>
+            </div>
+            <div id="Intro2">
+                <br><img id="bossicon" src="Bossicon.png">
+                <br><span style="font-size: 22px">고대의 골렘</span><br>
+                <br>선사파이어의 왕 <span style="color: blue;">최비령</span>이 창조한 피조물
+                <br>땅에 잠든 고대 마법 도시 <span style="color: blue;">선사파이어</span>를 찾지 못하게 지키고 있다.
+                <br>600년 동안 지상에서 침입자들을 쫓아내고 있을 만큼 강하다.
+                <div id="g"><br><span style="font-size: 22px">각오해라!!! 9번째 침입자!!!</span>
+                <br><br>셀리느 : 골렘...? 날 공격하려는거야? 실력발휘좀 해볼까?</div>
+                <div id="next2" onclick="NextB()">NEXT</div>
+            </div>
+            <div id="Intro3">
+                <div id="skill">
+                    <br>
+                    <img src="Skillicon1.png">
+                    <img src="Skillicon2.png">
+                    <img src="Skillicon3.png">
+                    <img src="Skillicon4.png">
+                    <img src="Skillicon5.png">
+                </div>
+                <div><span style="color: #FF3333">셀리느</span>는 <span style="color: green;">신월</span>에서 여러 마법을 배운 실력자다.
+                <br>신중하게 마법을 사용하여 골렘을 쓰러뜨리자!</div>
+                <div>
+                    <br>A 키 : <span style="color: red">파이어볼(F)</span> - 전방으로 화염구를 발사한다. 쿨타임:2초 / MP:3%<br>
+                    <br>Z 키 : <span style="font-weight: bold;">윈드(N)</span> - 빠르고 날카로운 바람을 발사한다. 쿨타임:5초 / MP:6%<br>
+                    <br>X 키 : <span style="color: goldenrod">썬더(E)</span> - 강력한 번개를 일으킨다. 번개에 맞은 대상은 공격력이 감소한다. 쿨타임:20초 / MP:40%<br>
+                    <br>W 키 : <span style="color: blue">웨이브(W)</span> - 공기 중의 수분을 모아 파도를 일으킨다. 쿨타임:10초 / MP:20%<br>
+                    <br>S 키 : <span style="color: green">힐(Buff)</span> - 마나를 사용하여 자신의 체력을 회복한다. 회복량:10% / MP:10%<br>
+                    <br>TIP : <span style="color: blue">웨이브(W)</span>는 화 속성에게 2배의 데미지를 입힌다.
+                </div>
+                <div id="next3" onclick="Start()">NEXT</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const sound = document.getElementById('sound');
+    sound.volume = 0.33;
+    function IntroA() {
+        document.getElementById('a').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('b').style.display = 'block';
+        }, 2000);
+        setTimeout(function() {
+            document.getElementById('c').style.display = 'block';
+        }, 4000);
+        setTimeout(function() {
+            document.getElementById('d').style.display = 'block';
+            sound.play();
+        }, 6000);
+        setTimeout(function() {
+            document.getElementById('e').style.display = 'block';
+        }, 8000);
+        setTimeout(function() {
+            document.getElementById('f').style.display = 'block';
+            document.getElementById('Boss').style.display = 'block';
+            document.getElementById('next1').style.display = 'block';
+        }, 10000);
+    }
+    function NextA() {
+        document.getElementById('Intro1').style.display = 'none';
+        document.getElementById('Intro2').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('g').style.display = 'block';
+            sound.play();
+        }, 3000);
+        setTimeout(function() {
+            document.getElementById('next2').style.display = 'block';
+        }, 5000);
+    }
+    function NextB() {
+        document.getElementById('Intro2').style.display = 'none';
+        document.getElementById('Intro3').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('next3').style.display = 'block';
+        }, 3000);
+    }
+    function Start() {
+        window.location.href = 'HTMLrpg.html';
+    }
+</script>
+</html>

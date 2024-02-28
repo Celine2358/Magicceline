@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+#PlayerUI, #BossUI {
+    display: flex;
+    position: absolute;
+}
+#HeadUI, #nickname, #head, #HP, #MP, #Damage,
+#icon1, #icon2, #icon3, #icon4, #icon5,
+#BossUI, #BossHP, #Msg, #BossDamage, #BossDebuff, #BossDie {
+    display: block;
+    position: absolute;
+}
+
+#PlayerUI {
+    left: 8px;
+}
+#nickname {
+    top: 526px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 65.55px; height: 20px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 13px;
+}
+#head {
+    top: 550px;
+    display: flex;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 65.55px; height: 58.65px;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+#HP { /* HP Bar */
+    top: 555px;
+    left: 71px;
+    color: black;
+    background: linear-gradient(to right, #FF6666 100%, white 0%);
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 220px; height: 22px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 22px;
+}
+#MP { /* MP Bar */
+    top: 580px;
+    left: 71px;
+    color: black;
+    background: linear-gradient(to right, #66B2FF 50%, white 50%);
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 220px; height: 22px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 22px;
+}
+#Damage { /* 데미지 */
+    top: 520px;
+    left: 71px;
+    color: #FF6666;
+    -webkit-text-stroke: 1px #202020;
+    font-size: 27px;
+    text-align: center;
+    line-height: 30px;
+    width: 220px; height: 32px;
+}
+#icon1, #icon2, #icon3, #icon4, #icon5 {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    top: 550px;
+    width: 55px; height: 55px;
+}
+#icon1 {
+    left: 295px;
+}
+#icon2 {
+    left: 355px;
+}
+#icon3 {
+    left: 415px;
+}
+#icon4 {
+    left: 475px;
+}
+#icon5 {
+    left: 535px;
+}
+#BossUI {
+    display: flex;
+    left: 1140px;
+    top: 530px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    width: 180px; height: 25px;
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+#BossHP {
+    top: 27px;
+    background: linear-gradient(to right, #FF6666 100%, white 0%);
+    border: 2px solid black;
+    border-radius: 8px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    width: 270px; height: 25px;
+}
+#BossDamage {
+    top: 150px;
+    left: 1200px;
+    width: 50px; height: 40px;
+    color: #FF6666;
+    -webkit-text-stroke: 1px #202020;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+#BossDebuff {
+    display: none;
+    top: 188px;
+    left: 1200px;
+}
+#BossDie {
+    display: none;
+    top: 190px;
+    left: 1040px;
+}
+#Msg {
+    top: 563px;
+    left: 630px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: white;
+    width: 340px; height: 44px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 44px;
+}
