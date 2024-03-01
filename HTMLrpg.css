@@ -70,7 +70,7 @@ body {
     top: 395px;
 }
 #warn1, #warn2 { /* 폭발 예고 */
-    filter: hue-rotate(300deg);
+    filter: contrast(300%) hue-rotate(300deg) saturate(300%);
     display: none;
     top: 385px;
     left: 70px;

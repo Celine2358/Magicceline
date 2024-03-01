@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (BossHP <= 70000 && BossHP > 50000) {
             targetBoom();
         }
-    }, 15000);
+    }, 16000);
     setInterval(function() {
         if (BossHP <= 70000 && BossHP > 60000 && PatternB == 0) {
             BossHP_70();
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (BossHP <= 60000 && BossHP > 20000) {
             boss_beam();
         }
-    }, 20000);
+    }, 23000);
     setInterval(function() {
         if (BossHP <= 60000 && BossHP > 50000 && PatternC == 0) {
             BossHP_60();
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (BossHP <= 50000 && BossHP > 20000) {
             targetBoom();
         }
-    }, 13000);
+    }, 14000);
     setInterval(function() {
         if (BossHP <= 50000 && BossHP > 33000 && PatternD == 0) {
             BossHP_50();
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (BossHP <= 20000 && BossHP > 0) {
             targetBoom();
         }
-    }, 9000);
+    }, 11000);
     setInterval(function() { 
         if (BossHP <= 20000 && BossHP > 0) {
             boss_spark();
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (BossHP <= 20000 && BossHP > 0) {
             boss_beam();
         }
-    }, 16000);
+    }, 19000);
     setInterval(function() {
         if (BossHP <= 20000 && BossHP > 0 && PatternF == 0) {
             BossHP_20();
@@ -328,10 +328,10 @@ function boss_explosion1() { // 보스 스킬 : 폭발1
             // 위치 업데이트
             explosion1Body = ex1.getBoundingClientRect();
         }, 100);
-    }, 1200);
+    }, 1800);
     setTimeout(function() {
         ex1.style.display = 'none';
-    }, 1900);
+    }, 2500);
 }
 function boss_explosion2() { // 보스 스킬 : 폭발2
 
@@ -353,10 +353,10 @@ function boss_explosion2() { // 보스 스킬 : 폭발2
             // 위치 업데이트
             explosion2Body = ex2.getBoundingClientRect();
         }, 100);
-    }, 1200);
+    }, 1800);
     setTimeout(function() {
         ex2.style.display = 'none';
-    }, 1900);
+    }, 2500);
 }
 function targetBoom() { // 보스 스킬 : 추적 폭발
 

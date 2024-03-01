@@ -46,7 +46,7 @@ var DamageResult = 0 // 최종 받는 데미지
 var ATT = 0
 var GUARD = 0
 function CombatStat() {
-    ATT = Math.floor(Math.random() * (61 - 40) + 40); // 공격력 계수 (40~60)
+    ATT = Math.floor(Math.random() * (66 - 45) + 45); // 공격력 계수 (45~65)
     GUARD = Math.floor(Math.random() * (56 - 45) + 45); // 방어력 계수 (45~55)
 }
 
@@ -279,7 +279,7 @@ function boomDamage() { // 추적 폭발 데미지
 }
 function firefield1Damage() { // 불길 1 데미지
 
-    DamageResult = (BossATT * 1.5) - GUARD;
+    DamageResult = (BossATT * 1.4) - GUARD;
 
     if (
         PlayerBody.right > firefield1Body.left &&
@@ -326,7 +326,7 @@ function firefield2Damage() { // 불길 2 데미지
 }
 function beamDamage() { // 레이저 데미지
 
-    DamageResult = (BossATT * 3.6) - GUARD;
+    DamageResult = (BossATT * 3.7) - GUARD;
 
     if (
         (PlayerBody.right > beam1Body.left &&

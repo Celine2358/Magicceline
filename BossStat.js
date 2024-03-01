@@ -101,7 +101,7 @@ function windDamage() { // 윈드 피격
     }
 }
 function thunderDamage() { // 썬더 피격
-    BossDamage = (ATT * 30 + BonusDamage) - BossGUARD; // 계수 30
+    BossDamage = (ATT * 23 + BonusDamage) - BossGUARD; // 계수 23
     if (
         BossBody.right > thunderBody.left &&
         BossBody.left < thunderBody.right &&
@@ -127,7 +127,7 @@ function thunderDamage() { // 썬더 피격
 }
 function waveDamage() { // 웨이브 피격
 
-    BossDamage = (ATT * 11 + BonusDamage) * (FG + 1) - BossGUARD; // 계수 11 (Fire 모드 일때 데미지 2배)
+    BossDamage = (ATT * 16 + BonusDamage) * (FG + 1) - BossGUARD; // 계수 16 (Fire 모드 일때 데미지 2배)
     if (
         BossBody.right > waveBody.left &&
         BossBody.left < waveBody.right &&

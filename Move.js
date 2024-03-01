@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() { // 캐릭터 이동, 
         // 오른쪽 화살표 키
         if (event.key === "ArrowRight" && HP > 0) {
 
-           PlayerX += 15;
+           PlayerX += 18;
   
            if (PlayerX > 920) { /* 보스 너머 방지 */
               PlayerX = 920;
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() { // 캐릭터 이동, 
         // 왼쪽 화살표 키
         else if (event.key === "ArrowLeft" && HP > 0) {
 
-            PlayerX -= 15;
+            PlayerX -= 18;
   
             if (PlayerX <= 10) { /* 필드 벗어남 방지 */
 
@@ -108,20 +108,20 @@ document.addEventListener("DOMContentLoaded", function() { // 캐릭터 이동, 
             }
         }
 
-        // X 키 : 썬더 (마나 40%, 쿨 15초)
+        // X 키 : 썬더 (마나 35%, 쿨 20초)
         else if (event.key === 'x' && HP > 0) {
             
-            if (MP >= 40 && ct4 >= 20) {
+            if (MP >= 35 && ct4 >= 20) {
                 Skill_thunder();
             } else {
 
             }
         }
 
-        // W 키 : 웨이브 (마나 20%, 쿨 10초)
+        // W 키 : 웨이브 (마나 15%, 쿨 10초)
         else if (event.key === 'w' && HP > 0) {
 
-            if (MP >= 20 && ct5 >= 10) {
+            if (MP >= 15 && ct5 >= 10) {
                 Skill_wave();
             } else {
 
@@ -199,10 +199,10 @@ document.addEventListener("DOMContentLoaded", function() { // 캐릭터 이동, 
         }, 1000);
     }
     
-    function Skill_thunder() { // 썬더 (계수:40)
+    function Skill_thunder() { // 썬더
 
-        MP -= 40;
-        emptyMP += 40;
+        MP -= 35;
+        emptyMP += 35;
         ct4 -= 20;
         thunder.style.display = 'block';
         thunderSound.play();
@@ -221,8 +221,8 @@ document.addEventListener("DOMContentLoaded", function() { // 캐릭터 이동, 
 
     function Skill_wave() { // 웨이브
 
-        MP -= 20;
-        emptyMP += 20;
+        MP -= 15;
+        emptyMP += 15;
         ct5 -= 10;
         let waveX = PlayerX + 15; // 웨이브 X축
         let waveAtt; // 웨이브 발사

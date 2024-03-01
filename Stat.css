@@ -144,8 +144,8 @@
     border: 2px solid black;
     border-radius: 8px;
     background-color: white;
-    width: 340px; height: 44px;
-    font-size: 15px;
+    width: 360px; height: 44px;
+    font-size: 16px;
     text-align: center;
     line-height: 44px;
 }
